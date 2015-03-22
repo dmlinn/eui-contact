@@ -19,6 +19,6 @@
     "node": "0.10.25"
   },  
   "scripts": {
-    "start": "node app/index.html"
+    "start": "node server.js"
   }
 }
