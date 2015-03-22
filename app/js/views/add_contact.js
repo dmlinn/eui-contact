@@ -81,6 +81,9 @@ define([
 
       $(".alert-box").slideDown().delay(2000).slideUp();
 
+      // Clear out model
+      this.model = new ContactModel();
+
       return false;
     },
 
