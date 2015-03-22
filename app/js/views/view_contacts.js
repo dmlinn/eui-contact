@@ -18,6 +18,10 @@ define([
       this.collection = new ContactCollection();
       this.template = _.template( viewContactsTemplate );
       this.listenTo( this.collection, 'add', this.render );
+
+      // Quick and drity selected nav indicator
+      $('.top-bar-section li').last().addClass('active');
+      $('.top-bar-section li').first().removeClass('active');
     },
 
     el: $('.content'),

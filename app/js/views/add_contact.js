@@ -20,7 +20,11 @@ define([
       this.collection = new ContactCollection();
       this.template = _.template( contactsTemplate );
 
-      $(".alert-box .close").click(function(){$(".alert-box").slideUp();});
+      $('.alert-box .close').click(function(){$(".alert-box").slideUp();});
+
+      // Quick and drity selected nav indicator
+      $('.top-bar-section li').first().addClass('active');
+      $('.top-bar-section li').last().removeClass('active');
     },
 
     // Page element recieving data
@@ -29,7 +33,7 @@ define([
     // Bind events to dom elements
     events: {
      'change #country-select'   : 'countryChange',
-     'submit'                   : 'submitForm',
+     'submit form'              : 'submitForm',
      'click tr'                 : 'getContact'
     },
 
