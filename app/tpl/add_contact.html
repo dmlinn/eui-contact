@@ -6,16 +6,16 @@
   </div>
 </div>
 
-<form>
+<form data-abide>
   <div class="row">
     <div class="large-6 columns">
-      <label>First Name 
-        <input type="text" name="fname" placeholde value="<% edit.fname %>" class="fname"/>
+      <label>First Name * (Between 3 and 75 characters)
+        <input type="text" name="fname" value="<% edit.fname %>" class="fname" required pattern="(^.{3,35}$)"/>
       </label>
     </div>
     <div class="large-6 columns">
-      <label>Last Name
-        <input type="text" name="lname" value="<% edit.lname %>" class="lname"/>
+      <label>Last Name * (Between 3 and 75 characters)
+        <input type="text" name="lname" value="<% edit.lname %>" class="lname" required pattern="(^.{3,35}$)"/>
       </label>
     </div>
   </div>
@@ -56,13 +56,13 @@
   </div>
   <div class="row">
     <div class="large-6 columns">
-      <label>Phone Number
-        <input type="text" name="phone" value="<% edit.phone %>" class="phone"/>
+      <label>Phone Number *
+        <input type="number" name="phone" value="<% edit.phone %>" class="phone" required/>
       </label>
     </div>
     <div class="large-6 columns">
-      <label>Email
-        <input type="text" name="email" value="<% edit.email %>" class="email"/>
+      <label>Email *
+        <input type="email" name="email" value="<% edit.email %>" class="email" required/>
       </label>
     </div>
   </div>

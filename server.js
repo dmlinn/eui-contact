@@ -32,11 +32,19 @@ app.use( bodyParser.urlencoded({     // to support URL-encoded bodies
 // - Probably best to put this in another file, if possible.
 // -----------------------------------------
 
+// var connection = mysql.createConnection({
+//   host     : 'localhost',
+//   user     : 'root',
+//   password : '',
+//   database : 'eui-contact'
+// });
+
 var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'eui-contact'
+  host     : 'kr7dr7glxsxnl6h6.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  user     : 'zfn4dqio7bj831bh',
+  password : 'vdltn38pqv2lacn5',
+  database : 'eui-contact',
+  port     : 3306
 });
 
 app.get("/api/contact/:id?",function(req,res){
@@ -52,7 +60,7 @@ app.get("/api/contact/:id?",function(req,res){
   if (!err){
     res.send(rows);
   }else{
-    console.log('Error while performing Query.');
+    console.log('Error while performing Query. ' + err);
   }
   });
 });
