@@ -17,8 +17,11 @@
   "engines": {
     "npm": "2.7.3",
     "node": "0.10.25"
-  },  
+  },
   "scripts": {
     "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.12.3"
   }
 }
