@@ -10,26 +10,26 @@
   <div class="row">
     <div class="large-6 columns">
       <label>First Name * (Between 3 and 75 characters)
-        <input type="text" name="fname" value="<% edit.fname %>" class="fname" required pattern="(^.{3,35}$)"/>
+        <input type="text" name="fname" value="<% edit_contact.fname %>" class="fname" required pattern="(^.{3,75}$)"/>
       </label>
     </div>
     <div class="large-6 columns">
       <label>Last Name * (Between 3 and 75 characters)
-        <input type="text" name="lname" value="<% edit.lname %>" class="lname" required pattern="(^.{3,35}$)"/>
+        <input type="text" name="lname" value="<% edit_contact.lname %>" class="lname" required pattern="(^.{3,75}$)"/>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
       <label>Address
-        <input type="text" name="address" value="<% edit.address %>" class="address"/>
+        <input type="text" name="address" value="<% edit_contact.address %>" class="address"/>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-12 columns">
       <label>Country
-        <select name="country" id="country-select" value="<% edit.country %>" class="country">
+        <select name="country" id="country-select" value="<% edit_contact.country %>" class="country">
           <% _.each(countryList, function(country){ %>
             <option value="<%= country.code %>" <% if (country.code == "US") { %> selected <% } %> ><%= country.name %></option>          
           <% }); %>  
@@ -40,29 +40,30 @@
   <div class="row">
     <div class="large-4 columns">
       <label>City
-        <input type="text" name="city" value="<% edit.city %>" class="city"/>
+        <input type="text" name="city" value="<% edit_contact.city %>" class="city"/>
       </label>
     </div>
     <div class="large-4 columns">
       <label class="state_provence">State/Provence
-        <input type="text" name="state_provence" value="<% edit.state_provence %>" class="state_provence"/>
+        <select name="provence" id="provence-select" value="<% edit_contact.provence %>" class="provence">
+        </select>
       </label>
     </div>
     <div class="large-4 columns">
       <label>Zip/Postal Code
-        <input type="text" name="postal_code" value="<% edit.postal_code %>" class="postal_code"/>
+        <input type="text" name="postal_code" value="<% edit_contact.postal_code %>" class="postal_code"/>
       </label>
     </div>
   </div>
   <div class="row">
     <div class="large-6 columns">
       <label>Phone Number *
-        <input type="number" name="phone" value="<% edit.phone %>" class="phone" required/>
+        <input type="number" name="phone" value="<% edit_contact.phone %>" class="phone" required pattern="(^.{7,20}$)"/>
       </label>
     </div>
     <div class="large-6 columns">
       <label>Email *
-        <input type="email" name="email" value="<% edit.email %>" class="email" required/>
+        <input type="email" name="email" value="<% edit_contact.email %>" class="email" required/>
       </label>
     </div>
   </div>
@@ -82,13 +83,14 @@
 <div class="row">
   <div class="large-12 columns">
     <h2>Existing Contacts</h2>
-    <p>Select a contact to edit.</p>
+    <p>Select a contact to edit_contact.</p>
   </div>
 </div>
+
 <!-- View Contacts -->
 <div class="row">
   <div class="large-12 columns">
-    <table class="large-12 columns">
+    <table class="large-12">
       <thead>
         <tr>
           <th>First Name</th>

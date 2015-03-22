@@ -1,3 +1,10 @@
+/*
+ * Contact Form
+ * 
+ * By Daniel Linn
+ * Filename: contact_model.js
+ */
+
 define([
   'jquery',
   'underscore',

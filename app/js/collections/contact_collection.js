@@ -1,4 +1,10 @@
-// Filename: views/project/list
+/*
+ * Contact Form
+ * 
+ * By Daniel Linn
+ * Filename: contact_collection.js
+ */
+
 define([
   'contact_model'
 ], function(ContactModel){

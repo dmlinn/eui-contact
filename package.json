@@ -27,6 +27,7 @@
     "ejs": "^2.3.1",
     "express": "^4.12.3",
     "jquery-serializejson": "^2.5.0",
-    "mysql": "^2.5.5"
+    "mysql": "^2.5.5",
+    "provinces": "^0.2.0"
   }
 }

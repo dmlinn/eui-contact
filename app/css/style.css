@@ -6153,3 +6153,10 @@ th.hide-for-touch {
     display: table-cell !important; } }
 .top-bar {
   margin-bottom: 50px; }
+
+tr:hover {
+  background: #CCDDF0 !important;
+  cursor: pointer; }
+
+table {
+  padding: 0px; }

@@ -1,4 +1,12 @@
+/*
+ * Contact Form
+ * 
+ * By Daniel Linn
+ * Filename: app.js
+ */
+
 define([ 
+  //Default app libraries
   'jquery',
   'serializejson',
   'underscore',

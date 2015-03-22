@@ -1,4 +1,13 @@
-// Filename: views/project/list
+/*
+ * Contact Form
+ * 
+ * By Daniel Linn
+ * Filename: view_contacts.js
+ */
+
+// This page is completely unnecessary for the project,
+// but I needed some practice with backbone.
+
 define([
   'contact_collection',
   'text!/tpl/view_contacts.html'

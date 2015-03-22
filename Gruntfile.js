@@ -69,6 +69,12 @@ module.exports = function(grunt) {
              cwd: 'node_modules/jquery-serializejson/', 
              src: 'jquery.serializejson.min.js', 
              dest: 'app/js/lib' 
+          },
+          { 
+             expand: true, 
+             cwd: 'node_modules/provinces/', 
+             src: 'provinces.json', 
+             dest: 'app/js/lib' 
           }
         ]
       }

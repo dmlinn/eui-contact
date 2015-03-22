@@ -1,13 +1,23 @@
+/*
+ * Contact Form
+ * 
+ * By Daniel Linn
+ * Filename: main.js
+ */
+
 require.config({
   
   paths: {
+    // Define library paths
     jquery        : 'lib/jquery.min',
     serializejson : 'lib/jquery.serializejson.min',
     underscore    : 'lib/underscore-min',
     text          : 'lib/text',
     backbone      : 'lib/backbone-min',
     country_list  : 'lib/country-list',
+    provinces     : 'lib/provinces.json',
 
+    // Define app paths
     contact_model       :'models/contact_model',
     contact_collection  :'collections/contact_collection'
   },
@@ -17,20 +27,20 @@ require.config({
 
       "backbone": {
           deps: ["underscore", "jquery"],
-          exports: "Backbone"  //attaches "Backbone" to the window object
+          exports: "Backbone"
       },
 
       "underscore": {
-          exports: "_"  //attaches "Backbone" to the window object
+          exports: "_"
       },
 
       "country_list": {
-          exports: "countryList"  //attaches "Backbone" to the window object
+          exports: "countryList"
       },
 
       "serializejson": {
           deps: ["jquery"],
-          exports: "serializeJSON"  //attaches "Backbone" to the window object
+          exports: "serializeJSON"
       }
 
   } // end Shim Configuration
