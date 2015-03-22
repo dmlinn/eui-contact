@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="large-12 columns">
+    <table class="large-12 columns">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Address</th>
+          <th>Country</th>
+          <th>City</th>
+          <th>State/Provence</th>
+          <th>Postal Code</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% contacts.each(function(contact){ %>
+            <tr>
+              <td><%= contact.get('fname') %></td>
+              <td><%= contact.get('lname') %></td>
+              <td><%= contact.get('address') %></td>
+              <td><%= contact.get('country') %></td>
+              <td><%= contact.get('city') %></td>
+              <td><%= contact.get('state_provence') %></td>
+              <td><%= contact.get('postal_code') %></td>
+              <td><%= contact.get('phone') %></td>
+              <td><%= contact.get('email') %></td>
+            </tr>       
+          <% }); %> 
+      </tbody>
+    </table>
+  </div>
+</div>

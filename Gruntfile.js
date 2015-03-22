@@ -57,6 +57,18 @@ module.exports = function(grunt) {
              cwd: 'node_modules/backbone/', 
              src: 'backbone-min.js', 
              dest: 'app/js/lib' 
+          },
+          { 
+             expand: true, 
+             cwd: 'node_modules/iso-3166-country-list/', 
+             src: 'country-list.js', 
+             dest: 'app/js/lib' 
+          },
+          { 
+             expand: true, 
+             cwd: 'node_modules/jquery-serializejson/', 
+             src: 'jquery.serializejson.min.js', 
+             dest: 'app/js/lib' 
           }
         ]
       }

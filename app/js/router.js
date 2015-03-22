@@ -2,15 +2,15 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'views/home',
-  'views/page2'
-], function($, _, Backbone, HomeView, Page2View){
+  'views/add_contact',
+  'views/view_contacts'
+], function($, _, Backbone, AddContactView, ViewContactsView){
 
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      ''       : 'showHome',
-      'page2'  : 'showPage2'
+      ''       : 'showAddContact',
+      'page2'  : 'showViewContact'
     }
   });
 
@@ -19,17 +19,17 @@ define([
     console.log('router');
       // As above, call render on our loaded module
       // 'views/users/list'
-    app_router.on('route:showHome', function(){
+    app_router.on('route:showAddContact', function(){
       console.log('home');
-      var homeView = new HomeView();
+      var homeView = new AddContactView();
       homeView.render();
     });
       // As above, call render on our loaded module
       // 'views/users/list'
-    app_router.on('route:showPage2', function(){
+    app_router.on('route:showViewContact', function(){
       console.log('page2');
-      var page2View = new Page2View();
-      page2View.render();
+      var viewContactsView = new ViewContactsView();
+      viewContactsView.render();
     });
 
     Backbone.history.start({ pushState: true });
