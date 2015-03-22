@@ -16,6 +16,8 @@ require.config({
     backbone      : 'lib/backbone-min',
     country_list  : 'lib/country-list',
     provinces     : 'lib/provinces.json',
+    foundation    : 'lib/foundation',
+    alert         : 'lib/foundation.alert',
 
     // Define app paths
     contact_model       :'models/contact_model',
@@ -41,6 +43,16 @@ require.config({
       "serializejson": {
           deps: ["jquery"],
           exports: "serializeJSON"
+      },
+
+      "foundation": {
+          deps: ["jquery"],
+          exports: "foundation"
+      },
+
+      "alert": {
+          deps: ["jquery", "foundation"],
+          exports: "alert"
       }
 
   } // end Shim Configuration

@@ -19,6 +19,8 @@ define([
     initialize: function(){
       this.collection = new ContactCollection();
       this.template = _.template( contactsTemplate );
+
+      $(".alert-box .close").click(function(){$(".alert-box").slideUp();});
     },
 
     // Page element recieving data
@@ -72,6 +74,8 @@ define([
       this.collection.add(this.model);
 
       this.render();
+
+      $(".alert-box").slideDown().delay(2000).slideUp();
 
       return false;
     },

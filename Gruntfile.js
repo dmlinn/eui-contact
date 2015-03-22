@@ -72,6 +72,18 @@ module.exports = function(grunt) {
           },
           { 
              expand: true, 
+             cwd: 'bower_components/foundation/js/', 
+             src: 'foundation.js', 
+             dest: 'app/js/lib' 
+          },          
+          { 
+             expand: true, 
+             cwd: 'bower_components/foundation/js/foundation/', 
+             src: 'foundation.alert.js', 
+             dest: 'app/js/lib' 
+          },
+          { 
+             expand: true, 
              cwd: 'node_modules/provinces/', 
              src: 'provinces.json', 
              dest: 'app/js/lib' 

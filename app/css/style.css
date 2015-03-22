@@ -6158,5 +6158,5 @@ tr:hover {
   background: #CCDDF0 !important;
   cursor: pointer; }
 
-table {
-  padding: 0px; }
+.hide {
+  display: none; }
